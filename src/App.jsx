@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import User from "./components/User";
 
 function App() {
@@ -24,12 +23,7 @@ function App() {
       <h1>Users</h1>
       <section className="grid">
         {users.map((user) => (
-          <User
-            key={user.id}
-            name={user.name}
-            mail={user.mail}
-            image={user.image}
-          />
+          <User key={user.id} user={user} />
         ))}
       </section>
     </main>
